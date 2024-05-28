@@ -98,7 +98,7 @@ public final class Main extends JavaPlugin implements Listener {
         // 今回は青色で星型の花火を打ち上げる。
         fireworkMeta.addEffect(
                 FireworkEffect.builder()
-                        .withColor(Color.RED)
+                        .withColor(Color.YELLOW)
                         .withColor(Color.PURPLE)
                         .withColor(Color.NAVY)
                         .with(Type.BALL_LARGE)
@@ -107,11 +107,12 @@ public final class Main extends JavaPlugin implements Listener {
         fireworkMeta.setPower(8 - 3);
 
 
+
         // 追加した情報で再設定する。
         firework.setFireworkMeta(fireworkMeta);
 
         Path path = Path.of("firework.text"); //第一階層にこの名前で出力
-        Files.writeString(path, "たーまやー"); //このメッセージを出力する（追加ではなく上書き）
+        Files.writeString(path, "たまやー"); //このメッセージを出力する（追加ではなく上書き）
         player.sendMessage(Files.readString(path));
 
     }
